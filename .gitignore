@@ -1,0 +1,33 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+
+# ── PyInstaller 构建产物 ──
+dist/
+build/
+*.spec
+
+# ── Inno Setup 安装包输出 ──
+output/
+
+# ── 运行时配置（含 API Key，绝对不能提交） ──
+snapshot.json
+*.env
+*.key
+*.pem
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS 生成 ──
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ── 日志 ──
+*.log

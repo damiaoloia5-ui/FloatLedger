@@ -87,7 +87,7 @@ class _BalanceWorker(QThread):
 
 
 class OverlayWindow(QWidget):
-    """DeepSeek 余额监控桌面弹窗。"""
+    """FloatLedger — AI API 余额桌面悬浮窗。"""
 
     # 信号
     settings_requested = pyqtSignal()  # 请求打开设置
@@ -272,7 +272,7 @@ class OverlayWindow(QWidget):
         layout = QHBoxLayout()
         layout.setContentsMargins(0, 0, 0, 4)
 
-        title = QLabel("🔷 DeepSeek")
+        title = QLabel("📒 FloatLedger")
         title.setObjectName("titleLabel")
 
         layout.addWidget(title)

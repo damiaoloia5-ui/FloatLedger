@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 class TrayIcon(QSystemTrayIcon):
-    """DeepSeek 监控系统托盘图标。"""
+    """FloatLedger 系统托盘图标。"""
 
     def __init__(self, parent=None) -> None:
         super().__init__(parent)

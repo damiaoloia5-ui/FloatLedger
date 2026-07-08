@@ -8,7 +8,7 @@ from PyQt6.QtCore import QRect, Qt
 from PyQt6.QtGui import QColor, QFont, QIcon, QPainter, QPixmap
 
 
-# DeepSeek 品牌色系
+# FloatLedger 品牌色系
 _ICON_BG_START = QColor(68, 100, 246)  # 渐变起始色
 _ICON_BG_END = QColor(100, 80, 220)  # 渐变结束色
 _ICON_TEXT_COLOR = QColor(255, 255, 255)
@@ -33,12 +33,12 @@ def create_app_pixmap(size: int = 256) -> QPixmap:
     painter.setPen(Qt.PenStyle.NoPen)
     painter.drawRoundedRect(rect, radius, radius)
 
-    # "DS" 文字
+    # "FL" 文字
     font_size = max(int(size * 0.35), 8)
     font = QFont("Segoe UI", font_size, QFont.Weight.Bold)
     painter.setFont(font)
     painter.setPen(_ICON_TEXT_COLOR)
-    painter.drawText(rect, Qt.AlignmentFlag.AlignCenter, "DS")
+    painter.drawText(rect, Qt.AlignmentFlag.AlignCenter, "FL")
 
     painter.end()
     return pixmap

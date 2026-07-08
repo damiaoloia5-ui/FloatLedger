@@ -3,7 +3,7 @@ chcp 65001 >nul
 setlocal enabledelayedexpansion
 
 echo ========================================
-echo  DeepSeek Monitor - Build Script
+echo  FloatLedger - Build Script
 echo ========================================
 echo.
 
@@ -51,7 +51,7 @@ if not exist "assets\icon.ico" (
 )
 
 :: 关闭正在运行的实例（否则 exe 会被锁定）
-taskkill /f /im DeepSeekMonitor.exe >nul 2>&1
+taskkill /f /im FloatLedger.exe >nul 2>&1
 timeout /t 1 /nobreak >nul
 
 :: ── 步骤 1: PyInstaller 打包 ──
@@ -60,7 +60,7 @@ echo.
 
 pyinstaller --onefile ^
     --windowed ^
-    --name=DeepSeekMonitor ^
+    --name=FloatLedger ^
     %ICON_FLAG% ^
     --hidden-import=PyQt6.QtWidgets ^
     --hidden-import=PyQt6.QtCore ^
@@ -77,7 +77,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo [OK] PyInstaller build complete: dist\DeepSeekMonitor.exe
+echo [OK] PyInstaller build complete: dist\FloatLedger.exe
 echo.
 
 :: ── 安全检查：确认打包结果不含 snapshot.json ──
@@ -127,7 +127,7 @@ if not defined ISCC_PATH (
     echo   2. Install it, then re-run this script
     echo   3. Or manually compile: installer.iss
     echo.
-    echo   The portable exe is still available at: dist\DeepSeekMonitor.exe
+    echo   The portable exe is still available at: dist\FloatLedger.exe
     echo.
     goto :done
 )
@@ -145,8 +145,8 @@ echo ========================================
 echo  All builds complete!
 echo ========================================
 echo.
-echo   Portable exe: dist\DeepSeekMonitor.exe
-echo   Installer:    output\DeepSeekMonitor_Setup_*.exe
+echo   Portable exe: dist\FloatLedger.exe
+echo   Installer:    output\FloatLedger_Setup_*.exe
 echo.
 
 :done

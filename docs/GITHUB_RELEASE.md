@@ -29,13 +29,13 @@ git commit -m "Initial release"
 If using GitHub CLI:
 
 ```powershell
-gh repo create DeepSeekMonitor --public --source . --remote origin --push
+gh repo create FloatLedger --public --source . --remote origin --push
 ```
 
 If the repository already exists on GitHub:
 
 ```powershell
-git remote add origin https://github.com/<your-user-or-org>/DeepSeekMonitor.git
+git remote add origin https://github.com/<your-user-or-org>/FloatLedger.git
 git branch -M main
 git push -u origin main
 ```
@@ -47,10 +47,10 @@ Recommended release tag: `v1.0.0`
 With GitHub CLI:
 
 ```powershell
-gh release create v1.0.0 releases/DeepSeekMonitor_Setup_1.0.0.exe --title "DeepSeek Monitor 1.0.0" --notes-file CHANGELOG.md
+gh release create v1.0.0 releases/FloatLedger_Setup_1.0.0.exe --title "FloatLedger 1.0.0" --notes-file CHANGELOG.md
 ```
 
-Or open the repository on GitHub, create a new Release, and upload `releases/DeepSeekMonitor_Setup_1.0.0.exe` manually.
+Or open the repository on GitHub, create a new Release, and upload `releases/FloatLedger_Setup_1.0.0.exe` manually.
 
 ## Final security check
 

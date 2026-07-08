@@ -27,7 +27,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # ==================================================================
     "zh_CN": {
         # ── 主窗口 ──
-        "app_name": "DeepSeek 余额监控",
+        "app_name": "FloatLedger",
         "balance_title": "💰 后台余额",
         "spending_title": "📉 今日消费",
         "refresh_btn": "🔄 刷新",
@@ -43,8 +43,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "granted": "赠送",
         "close_tooltip": "关闭",
         # ── 托盘图标 ──
-        "tray_tooltip": "DeepSeek 余额监控",
-        "tray_balance_tooltip": "DeepSeek 余额: ¥{balance:.2f}",
+        "tray_tooltip": "FloatLedger",
+        "tray_balance_tooltip": "FloatLedger — ¥{balance:.2f}",
         "tray_show": "显示窗口",
         "tray_hide": "隐藏窗口",
         "tray_refresh": "🔄 刷新",
@@ -88,7 +88,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # 繁體中文
     # ==================================================================
     "zh_TW": {
-        "app_name": "DeepSeek 餘額監控",
+        "app_name": "FloatLedger",
         "balance_title": "💰 後台餘額",
         "spending_title": "📉 今日消費",
         "refresh_btn": "🔄 重新整理",
@@ -103,8 +103,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "topped_up": "儲值",
         "granted": "贈送",
         "close_tooltip": "關閉",
-        "tray_tooltip": "DeepSeek 餘額監控",
-        "tray_balance_tooltip": "DeepSeek 餘額: ¥{balance:.2f}",
+        "tray_tooltip": "FloatLedger",
+        "tray_balance_tooltip": "FloatLedger — ¥{balance:.2f}",
         "tray_show": "顯示視窗",
         "tray_hide": "隱藏視窗",
         "tray_refresh": "🔄 重新整理",
@@ -146,7 +146,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # English
     # ==================================================================
     "en": {
-        "app_name": "DeepSeek Balance Monitor",
+        "app_name": "FloatLedger",
         "balance_title": "💰 Balance",
         "spending_title": "📉 Today's Usage",
         "refresh_btn": "🔄 Refresh",
@@ -161,8 +161,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "topped_up": "Topped up",
         "granted": "Granted",
         "close_tooltip": "Close",
-        "tray_tooltip": "DeepSeek Balance Monitor",
-        "tray_balance_tooltip": "DeepSeek Balance: ¥{balance:.2f}",
+        "tray_tooltip": "FloatLedger",
+        "tray_balance_tooltip": "FloatLedger — ¥{balance:.2f}",
         "tray_show": "Show Window",
         "tray_hide": "Hide Window",
         "tray_refresh": "🔄 Refresh",
@@ -204,7 +204,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # 日本語
     # ==================================================================
     "ja": {
-        "app_name": "DeepSeek 残高モニター",
+        "app_name": "FloatLedger",
         "balance_title": "💰 バックエンド残高",
         "spending_title": "📉 本日の使用量",
         "refresh_btn": "🔄 更新",
@@ -219,8 +219,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "topped_up": "チャージ",
         "granted": "付与",
         "close_tooltip": "閉じる",
-        "tray_tooltip": "DeepSeek 残高モニター",
-        "tray_balance_tooltip": "DeepSeek 残高: ¥{balance:.2f}",
+        "tray_tooltip": "FloatLedger",
+        "tray_balance_tooltip": "FloatLedger — ¥{balance:.2f}",
         "tray_show": "ウィンドウを表示",
         "tray_hide": "ウィンドウを非表示",
         "tray_refresh": "🔄 更新",
@@ -262,7 +262,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # Русский
     # ==================================================================
     "ru": {
-        "app_name": "Монитор баланса DeepSeek",
+        "app_name": "FloatLedger",
         "balance_title": "💰 Баланс",
         "spending_title": "📉 Расход за сегодня",
         "refresh_btn": "🔄 Обновить",
@@ -277,8 +277,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "topped_up": "Пополнено",
         "granted": "Бонус",
         "close_tooltip": "Закрыть",
-        "tray_tooltip": "Монитор баланса DeepSeek",
-        "tray_balance_tooltip": "Баланс DeepSeek: ¥{balance:.2f}",
+        "tray_tooltip": "FloatLedger",
+        "tray_balance_tooltip": "FloatLedger — ¥{balance:.2f}",
         "tray_show": "Показать окно",
         "tray_hide": "Скрыть окно",
         "tray_refresh": "🔄 Обновить",
@@ -320,7 +320,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # Français
     # ==================================================================
     "fr": {
-        "app_name": "Moniteur de solde DeepSeek",
+        "app_name": "FloatLedger",
         "balance_title": "💰 Solde",
         "spending_title": "📉 Dépenses du jour",
         "refresh_btn": "🔄 Actualiser",
@@ -335,8 +335,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "topped_up": "Rechargé",
         "granted": "Offert",
         "close_tooltip": "Fermer",
-        "tray_tooltip": "Moniteur de solde DeepSeek",
-        "tray_balance_tooltip": "Solde DeepSeek : ¥{balance:.2f}",
+        "tray_tooltip": "FloatLedger",
+        "tray_balance_tooltip": "FloatLedger — ¥{balance:.2f}",
         "tray_show": "Afficher la fenêtre",
         "tray_hide": "Masquer la fenêtre",
         "tray_refresh": "🔄 Actualiser",
@@ -378,7 +378,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # Español
     # ==================================================================
     "es": {
-        "app_name": "Monitor de saldo DeepSeek",
+        "app_name": "FloatLedger",
         "balance_title": "💰 Saldo",
         "spending_title": "📉 Gasto de hoy",
         "refresh_btn": "🔄 Actualizar",
@@ -393,8 +393,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "topped_up": "Recargado",
         "granted": "Otorgado",
         "close_tooltip": "Cerrar",
-        "tray_tooltip": "Monitor de saldo DeepSeek",
-        "tray_balance_tooltip": "Saldo DeepSeek: ¥{balance:.2f}",
+        "tray_tooltip": "FloatLedger",
+        "tray_balance_tooltip": "FloatLedger — ¥{balance:.2f}",
         "tray_show": "Mostrar ventana",
         "tray_hide": "Ocultar ventana",
         "tray_refresh": "🔄 Actualizar",

@@ -1,4 +1,4 @@
-"""DeepSeek API 消费监控桌面弹窗 — 程序入口。
+"""FloatLedger — AI API 余额桌面悬浮监控，程序入口。
 
 启动流程（优化：窗口尽快出现，非关键初始化延迟执行）:
 1. 单实例检测（已运行则激活现有窗口并退出）
@@ -29,7 +29,7 @@ LOG_FORMAT = "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
 LOG_DATE_FORMAT = "%H:%M:%S"
 
 # 单实例通信的服务器名称
-_SINGLE_INSTANCE_SERVER = "DeepSeekMonitor_SingleInstance"
+_SINGLE_INSTANCE_SERVER = "FloatLedger_SingleInstance"
 
 # 模块级引用，防止 QLocalServer 被垃圾回收
 _single_instance_server: QLocalServer | None = None
@@ -128,11 +128,11 @@ def main() -> int:
     """程序入口。"""
     _setup_logging(debug="--debug" in sys.argv)
     logger = logging.getLogger("main")
-    logger.info("DeepSeek 余额监控启动中…")
+    logger.info("FloatLedger 启动中…")
 
     # 创建 Qt 应用
     app = QApplication(sys.argv)
-    app.setApplicationName("DeepSeek Monitor")
+    app.setApplicationName("FloatLedger")
     app.setQuitOnLastWindowClosed(False)  # 有托盘图标，关闭窗口不退出
 
     # 单实例检测：已有实例在运行 → 激活它并退出

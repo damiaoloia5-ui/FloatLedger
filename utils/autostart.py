@@ -11,7 +11,7 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 _REGISTRY_KEY = r"Software\Microsoft\Windows\CurrentVersion\Run"
-_REGISTRY_NAME = "DeepSeekMonitor"
+_REGISTRY_NAME = "FloatLedger"
 
 
 def _get_executable_command() -> str:

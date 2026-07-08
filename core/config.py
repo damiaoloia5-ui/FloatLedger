@@ -1,6 +1,6 @@
 """配置管理器 — 读写 snapshot.json。
 
-文件位置: %APPDATA%\\DeepSeekMonitor\\snapshot.json
+文件位置: %APPDATA%\\FloatLedger\\snapshot.json
 首次运行时自动创建默认配置。
 """
 
@@ -67,9 +67,9 @@ class AppState:
 
 
 def _get_config_dir() -> Path:
-    """获取配置文件目录（%APPDATA%\\DeepSeekMonitor）。"""
+    """获取配置文件目录（%APPDATA%\\FloatLedger）。"""
     app_data = os.environ.get("APPDATA", str(Path.home() / "AppData" / "Roaming"))
-    return Path(app_data) / "DeepSeekMonitor"
+    return Path(app_data) / "FloatLedger"
 
 
 class ConfigManager:

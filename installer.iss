@@ -1,22 +1,22 @@
 ; ==========================================================================
-; DeepSeek Monitor — Inno Setup 安装脚本
+; FloatLedger — Inno Setup 安装脚本
 ; 版本: 1.0.0
 ;
 ; 使用方法:
-;   1. 先运行 build.bat 生成 dist\DeepSeekMonitor.exe
+;   1. 先运行 build.bat 生成 dist\FloatLedger.exe
 ;   2. 用 Inno Setup Compiler 编译此文件
-;   3. 产出安装包: output\DeepSeekMonitor_Setup_1.0.0.exe
+;   3. 产出安装包: output\FloatLedger_Setup_1.0.0.exe
 ;
 ; 安全说明:
-;   API Key 存储在 %APPDATA%\DeepSeekMonitor\snapshot.json，
+;   API Key 存储在 %APPDATA%\FloatLedger\snapshot.json，
 ;   运行时动态创建，永远不会被打包进安装程序。
 ; ==========================================================================
 
-#define MyAppName        "DeepSeek Monitor"
+#define MyAppName        "FloatLedger"
 #define MyAppNameZh     "DeepSeek 余额监控"
 #define MyAppVersion    "1.0.0"
-#define MyAppPublisher  "DeepSeek Monitor"
-#define MyAppExeName    "DeepSeekMonitor.exe"
+#define MyAppPublisher  "FloatLedger"
+#define MyAppExeName    "FloatLedger.exe"
 #define MyAppURL        "https://api.deepseek.com"
 
 [Setup]
@@ -36,7 +36,7 @@ DefaultGroupName={#MyAppNameZh}
 
 ; ── 输出设置 ──
 OutputDir=output
-OutputBaseFilename=DeepSeekMonitor_Setup_{#MyAppVersion}
+OutputBaseFilename=FloatLedger_Setup_{#MyAppVersion}
 SetupIconFile=assets\icon.ico
 Compression=lzma2/ultra64
 SolidCompression=yes
@@ -100,11 +100,11 @@ chinesetraditional.UninstallDataPrompt=偵測到使用者設定資料目錄：%n
 
 ; ── English ──
 english.LaunchApp=Launch {#MyAppName}
-english.LaunchAppDesc=Start DeepSeek Monitor now
+english.LaunchAppDesc=Start FloatLedger now
 english.CreateDesktopIcon=Create &desktop shortcut
 english.CreateDesktopIconDesc=Place a shortcut on the desktop for quick access
 english.AutoStart=Launch at &startup
-english.AutoStartDesc=Automatically start DeepSeek Monitor when Windows starts
+english.AutoStartDesc=Automatically start FloatLedger when Windows starts
 english.InstallComplete=Installation Complete
 english.InstallCompleteDesc={#MyAppName} has been successfully installed.
 english.UninstallDataPrompt=User configuration data found at:%n%n%1%n%nDo you also want to delete the configuration data (including API Key and balance history)?
@@ -184,7 +184,7 @@ Name: "autostart";   Description: "{cm:AutoStart}";           GroupDescription: 
 [Registry]
 ; 开机自启（由 [Tasks] 条件控制）
 Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; \
-    ValueType: string; ValueName: "DeepSeekMonitor"; \
+    ValueType: string; ValueName: "FloatLedger"; \
     ValueData: """{app}\{#MyAppExeName}"""; \
     Flags: uninsdeletevalue; Tasks: autostart
 
@@ -206,7 +206,7 @@ Filename: "taskkill"; Parameters: "/f /im {#MyAppExeName}"; \
 
 [Code]
 // ── 默认安装路径：D 盘优先 ──
-// D 盘存在时默认安装到 D:\DeepSeek Monitor
+// D 盘存在时默认安装到 D:\FloatLedger
 // 否则回退到用户目录（最低权限，无需管理员）
 function GetDefaultInstallDir(Default: string): string;
 var
@@ -228,7 +228,7 @@ begin
   Result := True;
 
   // 检查用户数据目录是否存在
-  DataPath := ExpandConstant('{userappdata}') + '\DeepSeekMonitor';
+  DataPath := ExpandConstant('{userappdata}') + '\FloatLedger';
   if DirExists(DataPath) then
   begin
     DeleteData := MsgBox(

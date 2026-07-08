@@ -65,7 +65,7 @@ class _TestConnectionWorker(QThread):
 
 
 class SettingsDialog(QDialog):
-    """DeepSeek 监控设置对话框。"""
+    """FloatLedger 设置对话框。"""
 
     settings_saved = pyqtSignal()  # 设置已保存，需要应用变更
 

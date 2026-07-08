@@ -4,14 +4,14 @@
 
 This repository and its release installer must not include a real DeepSeek API Key.
 
-The application asks each user to enter their own API Key on first launch. The key is stored only on that user's machine at `%APPDATA%\DeepSeekMonitor\snapshot.json`.
+The application asks each user to enter their own API Key on first launch. The key is stored only on that user's machine at `%APPDATA%\FloatLedger\snapshot.json`.
 
 Before publishing, verify that these files are not committed:
 
 - `snapshot.json`
 - `.env` or `.env.*`
 - logs or screenshots containing a real `sk-...` key
-- any local AppData copy of `DeepSeekMonitor`
+- any local AppData copy of `FloatLedger`
 
 ## Release checklist
 

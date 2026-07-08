@@ -1,6 +1,6 @@
 ﻿# Privacy Policy
 
-DeepSeek Balance Monitor is a local Windows desktop application.
+FloatLedger is a local Windows desktop application for monitoring AI API account balances.
 
 ## Data processed
 
@@ -19,7 +19,7 @@ The application connects to `https://api.deepseek.com/user/balance` to retrieve 
 User settings and the encoded API Key are stored on the user's own computer at:
 
 ```text
-%APPDATA%\DeepSeekMonitor\snapshot.json
+%APPDATA%\FloatLedger\snapshot.json
 ```
 
 The application does not upload this local configuration file to any server controlled by this project.
@@ -30,4 +30,4 @@ This project does not include analytics, telemetry, advertising SDKs, or backgro
 
 ## Uninstalling
 
-The installer uninstaller asks whether to delete local user configuration data. If users choose to keep it, `%APPDATA%\DeepSeekMonitor\snapshot.json` remains on the machine.
+The installer uninstaller asks whether to delete local user configuration data. If users choose to keep it, `%APPDATA%\FloatLedger\snapshot.json` remains on the machine.

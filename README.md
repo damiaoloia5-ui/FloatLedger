@@ -1,58 +1,67 @@
-# DeepSeek 余额监控
+﻿# DeepSeek Balance Monitor
 
-一款 Windows 桌面工具，在桌面上显示常驻的半透明弹窗，实时展示 DeepSeek API 账户余额和当日消费。
+DeepSeek Balance Monitor 是一个 Windows 桌面工具，用于在桌面悬浮窗口中查看 DeepSeek API 账户余额和当日消耗。程序首次启动时由用户自行输入 DeepSeek API Key，仓库和安装包不内置作者或客户的 API Key。
+
+## 下载
+
+当前安装包已放在仓库内：
+
+- [DeepSeekMonitor_Setup_1.0.0.exe](releases/DeepSeekMonitor_Setup_1.0.0.exe)
+
+正式发布到 GitHub 时，建议同时创建 GitHub Release，并把 `releases/DeepSeekMonitor_Setup_1.0.0.exe` 上传为 Release 附件，这样客户可以直接从 Releases 页面下载。
 
 ## 功能
 
-- 💰 **后台余额** — 实时显示 DeepSeek 账户总余额（CNY）
-- 📉 **今日消费** — 自动计算当日 API 消费金额
-- 🔄 **自动刷新** — 可配置 1/5/10/30 分钟自动刷新
-- 📌 **桌面置顶** — 毛玻璃半透明卡片，始终悬浮在最前
-- 🖱️ **系统托盘** — 最小化到托盘，不占任务栏空间
-- 🌙 **深色模式** — 支持浅色/深色主题切换
-- 🚀 **开机自启** — 可选开机自动运行
+- 常驻桌面悬浮窗口显示 DeepSeek API 余额。
+- 自动计算当日消耗。
+- 支持 1 / 5 / 10 / 30 分钟刷新间隔。
+- 支持窗口置顶、透明度、浅色/深色主题。
+- 支持系统托盘、开机自启、多语言界面。
+- 首次运行自动提示配置 API Key。
 
-## 使用
+## API Key 安全说明
 
-1. 首次启动会提示输入 DeepSeek API Key（以 `sk-` 开头）
-2. API Key 可在 [DeepSeek 开放平台](https://platform.deepseek.com/api_keys) 获取
-3. 输入后自动查询余额并显示在桌面弹窗中
-4. 点击 ⚙ 可打开设置面板
+- 仓库内不包含任何真实 DeepSeek API Key。
+- 安装包不应包含用户本地配置文件或 API Key。
+- 每个客户首次运行时自行输入自己的 API Key。
+- API Key 仅保存在客户本机 `%APPDATA%\DeepSeekMonitor\snapshot.json`。
+- 当前实现使用 Base64 编码保存 API Key，这不是强加密，只是避免明文直接显示；安全性主要依赖 Windows 用户目录权限。
+- 不要把 `snapshot.json`、`.env`、日志、截图或任何真实 `sk-...` 密钥提交到 GitHub。
 
-## 快捷操作
+## 从源码运行
 
-| 操作 | 行为 |
-|------|------|
-| 拖拽标题栏 | 移动窗口 |
-| 点击 🔄 | 立即刷新 |
-| 点击 ⚙ | 打开设置 |
-| 点击 ✕ | 最小化到托盘 |
-| 双击托盘图标 | 显示/隐藏窗口 |
-| 右键托盘图标 | 弹出菜单 |
-
-## 数据存储
-
-配置文件位于：`%APPDATA%\DeepSeekMonitor\snapshot.json`
-
-API Key 以 Base64 编码存储，非明文保存。
-
-## 系统要求
-
-- Windows 10 / 11（64 位）
-- 无需安装 Python，独立运行
-
-## 从源码构建
-
-```batch
-# 安装依赖并打包
-build.bat
-
-# 产出：
-#   dist\DeepSeekMonitor.exe    （便携版）
-#   output\DeepSeekMonitor_Setup_*.exe  （安装包，需安装 Inno Setup 6）
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python main.py
 ```
 
-## 卸载
+## 构建安装包
 
-- **安装包版本**：通过「设置 → 应用」或开始菜单中的卸载程序卸载
-- **便携版本**：直接删除 .exe 文件即可；如需清除配置，删除 `%APPDATA%\DeepSeekMonitor` 目录
+构建环境：
+
+- Windows 10 / 11
+- Python 3.11 或更高版本
+- Inno Setup 6，用于生成安装包
+
+运行：
+
+```batch
+build.bat
+```
+
+产物：
+
+- `dist\DeepSeekMonitor.exe`：单文件便携版
+- `output\DeepSeekMonitor_Setup_1.0.0.exe`：安装包
+
+发布前请重新确认 `dist/`、`output/`、`build/` 中没有本地配置文件或密钥。默认 `.gitignore` 会排除这些构建目录，只保留 `releases/` 下用于发布的安装包副本。
+
+## GitHub 发布
+
+详细步骤见 [docs/GITHUB_RELEASE.md](docs/GITHUB_RELEASE.md)。
+
+## 隐私
+
+见 [PRIVACY.md](PRIVACY.md)。

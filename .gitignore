@@ -1,33 +1,59 @@
-# ── Python ──
+﻿# Python cache
 __pycache__/
 *.py[cod]
-*.pyo
-*.egg-info/
+*$py.class
 
-# ── PyInstaller 构建产物 ──
-dist/
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build artifacts
 build/
-*.spec
-
-# ── Inno Setup 安装包输出 ──
+dist/
 output/
+*.spec.bak
 
-# ── 运行时配置（含 API Key，绝对不能提交） ──
+# Release installers — do NOT store large binaries in Git.
+# Upload them to GitHub Releases instead:
+#   https://docs.github.com/en/repositories/releasing-projects-on-github
+releases/*.exe
+
+# Claude Code local session data
+.claude/
+
+# Serena MCP cache
+.serena/
+
+# Local app data and secrets
 snapshot.json
-*.env
+**/snapshot.json
+.env
+.env.*
 *.key
 *.pem
+*.p12
+*.pfx
+*.crt
+*.cer
 
-# ── IDE ──
+# Logs and local diagnostics
+*.log
+logs/
+*.tmp
+*.temp
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors and OS files
 .vscode/
 .idea/
-*.swp
-*.swo
-
-# ── OS 生成 ──
+.DS_Store
 Thumbs.db
 Desktop.ini
-.DS_Store
-
-# ── 日志 ──
-*.log
